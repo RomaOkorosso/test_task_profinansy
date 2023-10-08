@@ -6,6 +6,7 @@ class Logger:
     self-written 'module' for storing logs and printing their into terminal output
     class: Logger
     """
+
     def _write_to_file_(self, msg) -> None:
         """
         Func that receive text msg and paste it into log file in './logs/{now date}.log file'
