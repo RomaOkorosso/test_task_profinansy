@@ -7,7 +7,7 @@ tasks_data = {}
 
 class Tasks:
     @staticmethod
-    def perform_calculation(task_id: int, x: int, y: int, operator: str):
+    def perform_calculation(task_id: int, x: int, y: int, operator: str) -> dict:
         time.sleep(5)  # Simulate a delay for the calculation
         logger.log(f"perform_calculation - calc task_id: {task_id}, {x} {operator} {y}")
 

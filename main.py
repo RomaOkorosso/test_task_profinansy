@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.post("/calculate/{x}/{y}/{operator}")
 async def calculate(x: int, y: int, operator: str, background_tasks: BackgroundTasks):
-    if operator not in ["+", "-", "*", "\\"]:
+    if operator not in ["+", "-", "*", "\\"]:  # use \, because / parse as URL part
         logger.log(f"calculate - invalid operator: {operator}")
         raise HTTPException(
             status_code=400,
